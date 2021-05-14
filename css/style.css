@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+body {
+  font-family: serif;
+  /* background-color: #333; */
+  color: #333;
+}
+
+*,
+*::befor,
+*::after {
+  box-sizing: border-box;
+}
+
+header {
+  padding: 50px;
+}
+
+header h1 {
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 60px;
+  white-space: nowrap;
+}
+
+main {
+  max-width: 1000px;
+  width: 100%;
+  margin: 50px auto;
+}
+
+.contents li {
+  position: relative;
+}
+
+.contents li:not(:first-of-type) {
+  margin-top: 150px;
+}
+
+.contents li:nth-of-type(odd) .contentsText {
+  right: 0;
+}
+
+.contents li:nth-of-type(even) .contentsText {
+  align-items: flex-start;
+}
+.contents li:nth-of-type(even) img {
+  margin-left: auto;
+}
+
+.contentsText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: absolute;
+  top: 50px;
+}
+
+.contents h2 {
+  font-size: 50px;
+  font-weight: bold;
+  white-space: nowrap;
+  background-color: rgba(20, 20, 20, 0.5);
+  padding: 10px 20px;
+  line-height: 1.4;
+  letter-spacing: 0.05em;
+  border-radius: 5px;
+}
+
+.contents p {
+  line-height: 1.6;
+  font-size: 14px;
+  max-width: 340px;
+  padding: 15px;
+  margin-top: 30px;
+  border-radius: 5px;
+}
+
+.contents img {
+  width: 65%;
+  display: block;
+  border-radius: 5px;
+}
