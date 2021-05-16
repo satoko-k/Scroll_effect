@@ -15,12 +15,19 @@ body {
 header {
   padding: 50px;
 }
+@keyframes titleAni {
+  0% {
+    letter-spacing: 0.3em;
+    opacity: 0;
+  }
+}
 
 header h1 {
   font-size: 60px;
   font-weight: bold;
   margin-bottom: 60px;
   white-space: nowrap;
+  animation: titleAni 1.5s;
 }
 
 main {
@@ -44,8 +51,13 @@ main {
 .contents li:nth-of-type(even) .contentsText {
   align-items: flex-start;
 }
+
+.contents li:nth-of-type(odd) img {
+  transform: translate(-20px, 20px);
+}
 .contents li:nth-of-type(even) img {
   margin-left: auto;
+  transform: translate(20px, 20px);
 }
 
 .contentsText {
@@ -57,27 +69,45 @@ main {
 }
 
 .contents h2 {
-  font-size: 50px;
+  font-size: 45px;
   font-weight: bold;
   white-space: nowrap;
-  background-color: rgba(20, 20, 20, 0.5);
+  background-color: rgba(99, 153, 224, 0.6);
   padding: 10px 20px;
   line-height: 1.4;
   letter-spacing: 0.05em;
   border-radius: 5px;
+  opacity: 0;
+  transform: translateY(20px);
 }
 
 .contents p {
   line-height: 1.6;
-  font-size: 14px;
+  font-size: 18px;
   max-width: 340px;
   padding: 15px;
   margin-top: 30px;
   border-radius: 5px;
+  opacity: 0;
+  transform: translateY(20px);
 }
 
 .contents img {
-  width: 65%;
+  width: 60%;
   display: block;
   border-radius: 5px;
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.contents li.show h2,
+.contents li.show p {
+  transform: none;
+  opacity: 1;
+  transition: 1s;
+}
+.contents li.show img {
+  transform: none;
+  opacity: 1;
+  transition: 1s 0.5s;
 }
