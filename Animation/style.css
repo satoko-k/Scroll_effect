@@ -24,6 +24,9 @@ main {
   font-size: 70px;
   letter-spacing: 0.1em;
 }
+.textAnimation.fs35 {
+  font-size: 35px;
+}
 
 .textAnimation:not(:first-of-type) {
   margin-top: 20px;
