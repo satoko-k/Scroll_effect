@@ -32,9 +32,19 @@ main {
   margin-top: 20px;
 }
 
-@keyframes ShowText {
+@keyframes ShowTextFromBottom {
   0% {
     opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes ShowTextFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
   }
   100% {
     opacity: 1;
@@ -42,5 +52,14 @@ main {
 }
 
 .textAnimation span {
-  animation: ShowText 3s backwards;
+  display: inline-block;
+  animation: ShowText 2s backwards;
+}
+
+.textAnimation span:nth-of-type(odd) {
+  animation: ShowTextFromTop ease-out 2s backwards;
+}
+
+.textAnimation span:nth-of-type(even) {
+  animation: ShowTextFromBottom ease-out 2s backwards;
 }
