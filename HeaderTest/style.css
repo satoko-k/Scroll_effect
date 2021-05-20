@@ -1,0 +1,54 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+  height: 70px;
+  border-bottom: 1px solid #ccc;
+  opacity: 0;
+  transform: translateY(-100%); /* 要素自身の100% */
+}
+
+header.active {
+  opacity: 1;
+  transition: 0.5s;
+  transform: none;
+}
+
+nav ul {
+  display: flex;
+}
+nav ul li {
+  margin-right: 15px;
+}
+nav ul li:not(:first-of-type) {
+  margin-left: 15px;
+}
+section {
+  padding: 50px;
+}
+
+h2 {
+  font-size: 30px;
+  padding: 20px;
+}
+p {
+  line-height: 1.7;
+}
+#firstView {
+  height: 400px;
+  background-color: rgb(255, 241, 113);
+}
